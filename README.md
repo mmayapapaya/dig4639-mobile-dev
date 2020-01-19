@@ -5,8 +5,8 @@ This repository contains work completed during Spring 2020 in Dr. Murray's DIG46
 The *ice* folder contains in-class exercises. 
 
 ## About Me
-Maya Lindseth
+Maya Lindseth,
 
-mayalindseth.wordpress.com
+<a href=".mayalindseth.wordpress.com">
 
 Highly creative and passionate Graphic Designer with extensive experience in multimedia, marketing and print design. Seeking a job where I can exercise my creativity and problem solving skills.
