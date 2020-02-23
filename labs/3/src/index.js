@@ -1,14 +1,7 @@
 
-import Card from "./components/Card/index.js";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import App from './App';
 
-function runOnLoad()
-{
-    // Create a container for us
-    let element = document.createElement("div");
-    element.id = "container";
-    document.body.appendChild(element);
-    var newCard = new Card({content:"This is a card!"});
-    element.appendChild(newCard.render());
-}
-
-window.addEventListener("DOMContentLoaded", runOnLoad);
+ReactDOM.render(<App />, document.getElementById('root'));

@@ -5,13 +5,10 @@ import Card from "./components/Card/index.js";
 
 class App extends React.Component {
   render(){
-
-  return (
-    <div>
-<Card content="This is a card!"></Card>
-    </div>
-  );
-}
+    return (
+  <Card content="This is a card!"></Card>
+    );
+  }
 }
 
 export default App;

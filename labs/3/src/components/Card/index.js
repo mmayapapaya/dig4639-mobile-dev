@@ -1,15 +1,12 @@
+import React from "react";
 import "./index.css";
 
-class Card {
-	constructor(props) {
-		this.props = props;
-		this.element = document.createElement("div");
-		this.element.innerHTML = this.props.content;
-		this.element.setAttribute("class", "card");
-	}
+class Card extends React.Component {
 
 	render(){
-		return this.element;
+		return(
+			<div className = "card">{this.props.content}</div>
+			)
 	}
 }
 
