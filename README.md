@@ -7,6 +7,6 @@ The *ice* folder contains in-class exercises.
 ## About Me
 Maya Lindseth,
 
-mayalindseth.wordpress.com
+https://mayalindseth.myportfolio.com/
 
 Highly creative and passionate Graphic Designer with extensive experience in multimedia, marketing and print design. Seeking a job where I can exercise my creativity and problem solving skills.
