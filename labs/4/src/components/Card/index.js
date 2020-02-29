@@ -1,13 +1,33 @@
 import React from "react";
 import "./index.css";
 
-class Card extends React.Component {
+/*class Card extends React.Component {
 
 	render(){
 		return(
 			<div className = "card">{this.props.content}</div>
 			)
 	}
+}
+
+export default Card;*/
+
+//new code for 4
+class Card extends React.Component {
+
+  render() {
+    return(
+      <div className="card">
+        <span className="close" 
+        onClick={this.props.dataclick} 
+        datatitle={this.props.title}>&times;</span>
+        <h3>{this.props.title}</h3>
+        <p>{this.props.content}</p>
+      </div>
+    );
+  }
+
+
 }
 
 export default Card;
