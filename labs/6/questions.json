@@ -1,0 +1,70 @@
+[
+  {
+    "question": "What is my all time favorite video game?",
+    "answers" :
+    [
+      {"text": "Overwatch",
+      "correct": false
+      },
+      {
+        "text": "World of Warcraft",
+        "correct": true
+      },
+    ]
+  },
+
+  {
+    "question": "Which game did I just start - and now I'm head over heels obsessed with it?",
+    "answers" :
+    [
+      {"text": "Animal Crossing New Horizons",
+      "correct": true
+      },
+      {
+        "text": "Stardew Valley",
+        "correct": false
+      },
+    ]
+  },
+
+    {
+    "question": "What fruit is native to my island in Animal Crossing?",
+    "answers" :
+    [
+      {"text": "Apples",
+      "correct": true
+      },
+      {
+        "text": "Cherries",
+        "correct": false
+      },
+    ]
+  },
+
+    {
+    "question": "What is the name of my Animal Crossing island?",
+    "answers" :
+    [
+      {"text": "Berry Bay",
+      "correct": false
+      },
+      {
+        "text": "Kiwi Key",
+        "correct": true
+      },
+    ]
+  },
+
+      {
+    "question": "Which villager most recently moved on to my island?",
+    "answers" :
+    [
+      {"text": "Lily",
+      "correct": false
+      },
+      {
+        "text": "Erik",
+        "correct": true
+      },
+    ]
+  },
