@@ -1,4 +1,5 @@
 import React from 'react';
+import getProfile from './components/getProfile/index.js'
 
 const HEADERS = {
 	"method": "GET",
@@ -45,6 +46,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="contacts">
+      <getProfile />
        {
          this.state.contacts.map((value, index) => {
            return <p key={index}>{value.name}<br></br>{value.number}</p>;
