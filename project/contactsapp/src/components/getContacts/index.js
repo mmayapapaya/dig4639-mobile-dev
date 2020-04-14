@@ -9,25 +9,15 @@ const HEADERS = {
 	}
 }
 
-class App extends React.Component {
+class getContacts extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {contacts: [{name:"", number: ""}]};
+    this.state = {contacts: [{name:"", number: 0}]};
 
     this.nameRef= React.createRef();
     this.numberRef = React.createRef();
-  }
-
-    getValue = (event) => {
-
-    event.preventDefault();
-
-    const name = this.nameRef.current.value;
-    const number = this.numberRef.current.value;
-
-    this.setState({"name": name, "number": number});
 
   }
 
@@ -41,24 +31,23 @@ class App extends React.Component {
  
   }
 
-
   render() {
     return (
       <div className="contacts">
+      <addContact />
        {
          this.state.contacts.map((value, index) => {
            return <p key={index}>{value.name}<br></br>{value.number}</p>;
          })
        }
-    <p>{this.state.name}<br></br>{this.state.number}</p>
-    <form onSubmit={this.getValue}>
-    <input type="text" ref={this.nameRef} />
-    <input type="text" ref={this.numberRef} />
-      <button className="add">Add Contact</button>
+       <form onSubmit={this.getValue}>
+          <input type="text" ref={this.nameRef} />
+          <input type="text" ref={this.numberRef} />
+      <button className="add">Add Contact!</button>
       </form>
       </div>
     );
   }
-}
+ }
 
-export default App;
+export default getContacts;
