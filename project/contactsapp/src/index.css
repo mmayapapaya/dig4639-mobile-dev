@@ -16,6 +16,15 @@ input {
   margin-top: 10px;
   margin-bottom: 10px;
 }
+
+h3{
+	color: #778899;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: underline;
+	padding: auto;
+	text-align: center;	
+}
 p {
 	color: #778899;
 	font-size: 18px;

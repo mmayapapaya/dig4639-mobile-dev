@@ -1,5 +1,4 @@
 import React from 'react';
-import getProfile from './components/getProfile/index.js'
 
 const HEADERS = {
 	"method": "GET",
@@ -10,7 +9,7 @@ const HEADERS = {
 	}
 }
 
-class getProfile extends React.Component {
+class GetContacts extends React.Component {
 
   constructor(props) {
     super(props);
@@ -45,8 +44,8 @@ class getProfile extends React.Component {
 
   render() {
     return (
-      <div className="contacts">
-      <getProfile />
+      <div>
+      <h3>Contact List!</h3>
        {
          this.state.contacts.map((value, index) => {
            return <p key={index}>{value.name}<br></br>{value.number}</p>;
@@ -63,4 +62,4 @@ class getProfile extends React.Component {
   }
 }
 
-export default getProfile;
+export default GetContacts;
