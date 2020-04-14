@@ -9,7 +9,7 @@ const HEADERS = {
 	}
 }
 
-class App extends React.Component {
+class getContacts extends React.Component {
 
   constructor(props) {
     super(props);
@@ -27,18 +27,7 @@ class App extends React.Component {
     });
  
   }
-
-  render() {
-    return (
-      <div className="contacts">
-       {
-         this.state.contacts.map((value, index) => {
-           return <p key={index}>{value.name}<br></br>{value.number}</p>;
-         })
-       }
-      </div>
-    );
-  }
 }
 
-export default App;
+
+export default getContacts;
