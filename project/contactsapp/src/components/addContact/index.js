@@ -1,15 +1,28 @@
 import React from 'react';
 
-class addContact extends React.Component {
+const HEADERS = {
+  "method": "GET",
+  "headers": {
+  "API": "lindseth",
+  "Content-Type": "applications/json",
+  "Accept": "applications/json"
+  }
+}
 
-  constructor(props) {
+class AddContact extends React.Component {
+
+constructor(props) {
     super(props);
+
     this.state = {added: {}};
+
+    this.nameRef= React.createRef();
+    this.numberRef = React.createRef();
+    this.onSubmit = props.onSubmit;
+
   }
 
   componentDidMount() {
-    try{
-
     fetch("https://plato.mrl.ai:8081/contacts/add", {
       "method": "POST",
       "headers": {
@@ -17,35 +30,32 @@ class addContact extends React.Component {
         "Content-Type": "application/json",
         "Accept": "application/json"
       },
-      "body": JSON.stringify({
-        "name": "Jeffg",
-        "number": "777"
+      body: JSON.stringify({
+        name: this.nameRef,
+        number: this.numberRef
       })
     })
     .then(response => response.json() )
-    .then((data) => this.setState({added: data.added}) )
-    .catch(err => {
-      console.log(err);
-    });
-    } catch(e) {
-      console.log(e)
-    }
+    .then((data) => {
+    this.setState({added: this.nameRef})
+    this.setState({added: this.numberRef})
 
-  }
+  });
+
+}
 
   render() {
     return (
-    <div>
-    <form onSubmit={this.state.added.name}>
-    <input id="name" type="text" />
-    <button></button>
-    </form>
-        <h2>Added</h2>
-        <p>{this.state.added.name}</p>
-        <p>{this.state.added.number}</p>
+      <div>
+      <h3>Add Contact!</h3>
+    <form onSubmit={AddContact}>
+    <input type="text" ref={this.nameRef} />
+    <input type="number" ref={this.numberRef} />
+      <button className="add">Add Contact</button>
+      </form>
       </div>
     );
   }
 }
 
-export default addContact;
+export default AddContact;

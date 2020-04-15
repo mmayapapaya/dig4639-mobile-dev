@@ -1,5 +1,4 @@
 import React from 'react';
-import getProfile from './components/getProfile/index.js'
 
 const HEADERS = {
 	"method": "GET",
@@ -10,34 +9,23 @@ const HEADERS = {
 	}
 }
 
-class getProfile extends React.Component {
+class GetProfile extends React.Component {
 
   constructor(props) {
     super(props);
 
-    this.state = {contacts: [{name:"", number: ""}]};
+    this.state = {profile: []};
 
     this.nameRef= React.createRef();
     this.numberRef = React.createRef();
   }
 
-    getValue = (event) => {
-
-    event.preventDefault();
-
-    const name = this.nameRef.current.value;
-    const number = this.numberRef.current.value;
-
-    this.setState({"name": name, "number": number});
-
-  }
-
   componentDidMount() {
 
-    window.fetch("http://plato.mrl.ai:8080/contacts", {headers: {API: "lindseth"}})
+    window.fetch("http://plato.mrl.ai:8080/profile", {headers: {API: "lindseth"}})
     .then((res) => res.json())
     .then((data) => {
-      this.setState({contacts: data.contacts});
+      this.setState({profile: [data]});
     });
  
   }
@@ -45,22 +33,16 @@ class getProfile extends React.Component {
 
   render() {
     return (
-      <div className="contacts">
-      <getProfile />
+      <div className="profile">
+      <h3>User Profile!</h3>
        {
-         this.state.contacts.map((value, index) => {
-           return <p key={index}>{value.name}<br></br>{value.number}</p>;
+         this.state.profile.map((value, index) => {
+           return <p key={index}>{value.name}<br></br>{value.count}</p>;
          })
        }
-    <p>{this.state.name}<br></br>{this.state.number}</p>
-    <form onSubmit={this.getValue}>
-    <input type="text" ref={this.nameRef} />
-    <input type="text" ref={this.numberRef} />
-      <button className="add">Add Contact</button>
-      </form>
       </div>
     );
   }
 }
 
-export default getProfile;
+export default GetProfile;

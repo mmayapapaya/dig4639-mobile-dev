@@ -44,6 +44,19 @@ p {
 
 }
 
+.profile {
+  border: 2px solid #F08080;
+  border-radius: 5px;
+}
+.plus {
+  border: 2px solid #F08080;
+  border-radius: 5px;
+}
+.list {
+  border: 2px solid #F08080;
+  border-radius: 5px;
+}
+
 .add {
   border-radius: 15px;
   background-color: #F08080;

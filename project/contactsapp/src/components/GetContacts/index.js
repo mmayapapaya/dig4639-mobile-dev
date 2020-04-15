@@ -18,16 +18,6 @@ class GetContacts extends React.Component {
 
     this.nameRef= React.createRef();
     this.numberRef = React.createRef();
-  }
-
-    getValue = (event) => {
-
-    event.preventDefault();
-
-    const name = this.nameRef.current.value;
-    const number = this.numberRef.current.value;
-
-    this.setState({"name": name, "number": number});
 
   }
 
@@ -44,7 +34,7 @@ class GetContacts extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="list">
       <h3>Contact List!</h3>
        {
          this.state.contacts.map((value, index) => {
@@ -52,11 +42,6 @@ class GetContacts extends React.Component {
          })
        }
     <p>{this.state.name}<br></br>{this.state.number}</p>
-    <form onSubmit={this.getValue}>
-    <input type="text" ref={this.nameRef} />
-    <input type="text" ref={this.numberRef} />
-      <button className="add">Add Contact</button>
-      </form>
       </div>
     );
   }
