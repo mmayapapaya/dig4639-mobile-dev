@@ -16,8 +16,8 @@ class GetProfile extends React.Component {
 
     this.state = {profile: []};
 
-    this.nameRef= React.createRef();
-    this.numberRef = React.createRef();
+    //this.nameRef= React.createRef();
+    //this.numberRef = React.createRef();
   }
 
   componentDidMount() {
@@ -35,6 +35,7 @@ class GetProfile extends React.Component {
     return (
       <div className="profile">
       <h3>User Profile!</h3>
+      <p className="infotext">This is your profile name, <br></br> and your total number of contacts.</p>
        {
          this.state.profile.map((value, index) => {
            return <p key={index}>{value.name}<br></br>{value.count}</p>;

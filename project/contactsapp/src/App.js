@@ -1,8 +1,8 @@
 import React from 'react';
 import GetContacts from './components/GetContacts/index.js'; //DONE
 import GetProfile from './components/GetProfile/index.js'; //DONE
-import AddContact from './components/AddContact/index.js'; //NOT WORKING
-//import DeleteContact from './components/DeleteContact/index.js';
+import AddContact from './components/AddContact/index.js'; //DONE
+import DeleteContact from './components/DeleteContact/index.js'; //DONE
 
 class App extends React.Component {
 
@@ -13,7 +13,9 @@ class App extends React.Component {
       <br></br>
       <GetProfile />
       <br></br>
-      <AddContact /> 
+      <AddContact />
+      <br></br>
+      <DeleteContact /> 
       </div>
     );
   }

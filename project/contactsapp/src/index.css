@@ -33,6 +33,13 @@ p {
 	text-align: center;
 }
 
+.infotext {
+	color: #778899;
+	font-size: 14px;
+	padding: auto;
+	text-align: center;
+}
+
 .contacts {
   border-radius: 25px;
   background: #B0E0E6;

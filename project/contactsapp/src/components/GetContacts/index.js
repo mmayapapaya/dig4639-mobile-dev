@@ -41,6 +41,7 @@ class GetContacts extends React.Component {
            return <p key={index}>{value.name}<br></br>{value.number}</p>;
          })
        }
+
       </div>
     );
   }
