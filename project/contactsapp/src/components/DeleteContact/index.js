@@ -24,6 +24,9 @@ class DeleteContact extends React.Component{
 deleteContact = (event) => {
     let removeContact = {...HEADERS,
     "method": "POST",
+    "API": "lindseth",
+        "Content-Type": "application/json",
+        "Accept": "application/json",
     body: JSON.stringify({
         position: this.removeRef.current.value
     })

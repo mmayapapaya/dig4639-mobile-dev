@@ -106,6 +106,9 @@ constructor(props) {
 addContact = (event) => {
     let createContact = {...HEADERS,
     "method": "POST",
+    "API": "lindseth",
+    "Content-Type": "application/json",
+    "Accept": "application/json",
     body: JSON.stringify({
         name: this.nameRef.current.value,
         number: this.numberRef.current.value
